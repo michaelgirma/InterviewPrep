@@ -176,7 +176,7 @@ for num in range(5, 10, 2): #ranges from 5 to 10, counting by 2
 #Tuples
 #immutable, cannot change once created
 
-numbers = (1, 2, 3, 3)
+numbers = (1, 2, 3, 3, 3)
 print(numbers)
 print(numbers.count(3)) #returns the count of a value in a tuple 
 
