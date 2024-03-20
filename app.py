@@ -117,7 +117,7 @@ t = 1
 while t <= 10:
     print(t * "$") #the string repeats its self as many times as the number it is multiplied by
     # if t is 1, $ prints 1 time, so on and so on
-    t += 1 
+    t += 1  
 
 
 
