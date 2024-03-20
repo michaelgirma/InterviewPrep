@@ -119,8 +119,64 @@ while t <= 10:
     # if t is 1, $ prints 1 time, so on and so on
     t += 1  
 
+#Lists
+    
+#used to represent a list of objects
+names = ["John", "Bob", "Mosh", "Sam", "Mary"]
+#Indexes start at: 0 till the last item so in this case 4
+# You can also go from -1 to the beginning of the list, this would be going through the list backwards
 
+print(names) #prints the list
+print(names[0]) #prints the item in the list at index 0
+print(names[-1]) #prints the last item on the list
 
+names[0] = "Jon" #changes index 0 values to Jon
+print(names)
 
+print(names[0:3]) # will return indexes 0 to 2 excluding 3 but you still have to mention 3 to include 0 through 2, returns a new list does not modify the original
 
+#List Methods
+
+numbers = [1, 2, 3, 4, 5]
+
+numbers.append(6) #adds an item to end of list
+print(numbers)
+
+numbers.insert(1, -5) #provide index, then item, insert will insert a value into a specific index
+print(numbers)
+
+numbers.remove(3) #gets rid of a specified value
+print(numbers)
+
+numbers.clear() #clears everything in a list
+print(numbers)
+
+print(1 in numbers) #checks if 1 is in list
+
+print(len(numbers)) #returns the number of elements in a list
+
+# For loops
+numbers = [1, 2, 3, 4, 5, 6]
+
+for item in numbers: # a for loop, each iteration item will equal a value from the list, we iterate through the whole list
+    print(item)
+
+# Using the range() function
+range(5) #an object that can store a sequence of numbers
+
+for num in range(10): # ranges from 0 or specified start point until minus 1 of the end point, in this case 0 to 9
+    print(num)
+
+for num in range(5, 10): # ranges from 5 to 9
+    print(num)
+
+for num in range(5, 10, 2): #ranges from 5 to 10, counting by 2
+    print(num)
+
+#Tuples
+#immutable, cannot change once created
+
+numbers = (1, 2, 3, 3)
+print(numbers)
+print(numbers.count(3)) #returns the count of a value in a tuple
 
