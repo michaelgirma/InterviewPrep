@@ -1,4 +1,4 @@
-#The Coder Friends
+#The Coder Friends: Completed
 def winner(erica, bob):
     # Write your code here
     eScore = 0
@@ -30,17 +30,3 @@ def winner(erica, bob):
     else:
         winnerName = "Tie"
         return winnerName
-        
-    
-
-#Piles of boxes
-def pilesOfBoxes(boxesInPiles):
-    # Write your code here
-    long = 0
-    
-    for x in boxesInPiles:
-        while boxesInPiles[x] > boxesInPiles[x + 1]:
-            boxesInPiles[x] -= 1
-        long += 1
-        
-    return long
