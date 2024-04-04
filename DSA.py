@@ -24,7 +24,14 @@
 # 1. a notation used to describe a complexity, measures complexity as input size grows, measures how alogrithm performs in worst case scenario(Upper bounds)
 # 2. can only compare complexity among algorithms that solve the same problem
 # 3. O(1) --> Constant Time 
-# 4. 
+# 4. O(log n) --> Logarithmic Time, Sometimes called Sublinear
+# 5. O(n) --> Linear Time
+# 6. O(n^2) --> Quadratic Time
+# 7. O(n^3) --> Cubic Time
+# 8. Quasilinear Runtime --> O(n log n)
+# 9. Polynomial run times are algorithms that use worst case Quadratic or lower runtime, these are considered efficent and used in the real world
+# 10. Exponential run times are algorithms with complexity higher than O(n^2), these are not considered efficent and not used in the real world
+
 
 # Search Algorithms
 
