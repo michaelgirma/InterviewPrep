@@ -19,3 +19,8 @@ class Solution(object):
                     output.append(xindex)
                     return output
 
+# Remove Duplicates From Sorted Array
+# In Progress, gonna come back to it
+                
+# Remove Element
+# In Progress, gonna come back to it
