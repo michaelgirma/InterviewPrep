@@ -1,15 +1,20 @@
 #(Arrays&Hashing)
 
-#Contains Duplicates (in progress)
-# 41/75 testcases passed
+#Contains Duplicates (Completed)
+# Runtime: 455 ms
+# Time Complexity: O(n)
+# Space Complexity: O(n)
 class Solution(object):
     def containsDuplicate(self, nums):
         """
         :type nums: List[int]
         :rtype: bool
         """
+        num_set = set()
+
         for x in nums:
-            for y in nums[x+1:]:
-                if x == y:
-                    return True
-        return False 
+            if x in num_set:
+                return True
+            else:
+                num_set.add(x)
+        return False

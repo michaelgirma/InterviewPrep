@@ -47,4 +47,77 @@
 # input should be sorted because you can accidently cut of your target
 
 
+# Video link: https://www.youtube.com/watch?v=RcZsTI5h0kg
+#Hashmaps in Python
+
+# stores data in key:value pairs
+
+# What makes them useful?
+# 1. Custom Keys are easier for software engineers to work with
+# 2. Haspmaps allow for search in O(1), whereas arrays/linked lists are O(n)
+
+#Hash Functions
+# 1. Turns an array into a Hashmap
+# 2. Assign the value of a key to an index from an array
+
+# Efficency Compared to Array
+# 1. Array has to iterating through every index to search
+# 2. Hashmaps just need key and has function takes the key and outputs the index pf the value you are looking for
+
+# Syntax
+city_map = {} # empty hashmap
+
+cities = ["Calgary", "Vancouver", "Toronto"] #array of cities in Canada
+city_map["Canada"] = [] # creates the key Canada and makes its value an empty array
+city_map["Canada"] += cities # appends the cities to the key Canada 
+print(city_map)
+
+# a way to create a hashmap so that you do not have to manually declare the value type for every key you make, like line 71
+# called defaultdict
+
+from collections import defaultdict
+state_map = defaultdict(list) #creates a hashmap, every new key is automatically paired with an empty array/list
+states = ["Marland", "New York", "Denver"]
+state_map["America"] += states
+print(state_map)
+
+# Retrieving Data from Hashmaps, 3 methods
+city_map = {}
+print(city_map)
+
+cities = ["Calgary", "Vancouver", "Toronto"] 
+city_map["Canada"] = [] 
+city_map["Canada"] += cities 
+
+states = ["Marland", "New York", "Denver"]
+city_map["America"] = []
+city_map["America"] += states
+
+cities_1 = ["London", "Manchester"]
+city_map["England"] = []
+city_map["England"] += cities_1
+
+country_list = city_map.keys() #returns all keys from hashmap in the form of a list
+print(country_list)
+city_list = city_map.values() # returning all values of hashmap in the form of a list
+print(city_list)
+city_country_pairs = city_map.items() # returns all key value pairs as tuples
+print(city_country_pairs)
+
+# Video Link: https://www.youtube.com/watch?v=t9j8lCUGZXo
+# Data Structure: Set
+# Time Complexity
+# 1. Insertion, Deletion, Lookup: O(1)
+# Space Complexity
+# 1. O(n)
+numbers = [1, 1, 1, 2, 2, 3, 5 ,6, 5, 10, 8] # array of numbers
+uniques_set = set(numbers) # create set Data structure
+print(uniques_set) # prints set, puts numbers in increasing order and removes duplicates
+
+my_set = set()
+for nums in numbers:
+    my_set.add(nums)
+print(my_set)
+
+
 
