@@ -70,7 +70,6 @@ city_map = {} # empty hashmap
 cities = ["Calgary", "Vancouver", "Toronto"] #array of cities in Canada
 city_map["Canada"] = [] # creates the key Canada and makes its value an empty array
 city_map["Canada"] += cities # appends the cities to the key Canada 
-print(city_map)
 
 # a way to create a hashmap so that you do not have to manually declare the value type for every key you make, like line 71
 # called defaultdict

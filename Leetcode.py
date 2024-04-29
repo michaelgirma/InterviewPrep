@@ -1,5 +1,5 @@
 # Two Sum 
-# Runtime: 22ms
+# Runtime: 2676ms
 # Complexity: O(n^2)
 # Space Complexity: O(1)
 
@@ -11,13 +11,12 @@ class Solution(object):
         :rtype: List[int]
         """
         output = []
-        for yindex, y in enumerate(nums):
-            for xindex, x in enumerate(nums[yindex+1:]):
-                xindex += yindex + 1
-                temp = y + x
-                if temp == target:
-                    output.append(yindex)
-                    output.append(xindex)
+        for i, x in enumerate(nums):
+            for j, y in enumerate(nums[i+1:]):
+                j += i + 1
+                if x + y == target:
+                    output.append(i)
+                    output.append(j)
                     return output
 
 # Remove Duplicates From Sorted Array
@@ -40,3 +39,4 @@ class Solution(object):
                 
 # Remove Element
 # In Progress, gonna come back to it
+
