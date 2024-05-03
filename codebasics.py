@@ -81,3 +81,15 @@ for i in range(1, max):
 
 print("Odd numbers: ", odd_numbers)
 
+
+# Indpendent Practice
+
+num_array = [1, 2, 3, 4, 5]
+
+tracker = 0
+for y in num_array:
+    for x in num_array[2:]:
+        if y * x > tracker:
+            tracker = y * x
+
+print(tracker)
