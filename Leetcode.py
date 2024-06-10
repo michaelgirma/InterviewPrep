@@ -40,3 +40,15 @@ class Solution(object):
 # Remove Element
 # In Progress, gonna come back to it
 
+# Problem 66: Plus One
+# Runtime: 34ms
+
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        strArr = [str(char) for char in digits]
+        string = ''.join(strArr)
+        num = int(string)
+        total = num + 1
+        output = [int(x) for x in str(total)]
+        return output
+
