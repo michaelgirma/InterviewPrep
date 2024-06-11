@@ -38,10 +38,21 @@ class Solution(object):
         return k 
                 
 # Remove Element
-# In Progress, gonna come back to it
+# Runtime: 40ms
+# Time Complexity: O(n)
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        k = 0
+        for x in nums:
+            if x != val:
+                nums[k] = x
+                k += 1
+        return k
+
 
 # Problem 66: Plus One
 # Runtime: 34ms
+# Time Complexity: O(n)
 
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
