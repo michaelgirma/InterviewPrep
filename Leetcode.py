@@ -62,4 +62,24 @@ class Solution:
         total = num + 1
         output = [int(x) for x in str(total)]
         return output
+    
+# Problem 392: Is Subsequence
+# Runtime 36ms:
+# TIme Complexity: O(n)
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        target = 0
+        if s == "":
+            return True
+        elif t == "":
+            return False
+        else:
+            for x in t:
+                if target < len(s):
+                    if x == s[target]:
+                        target += 1
+            if target == len(s):
+                return True
+            else:
+                return False
 
