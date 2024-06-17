@@ -64,7 +64,7 @@ class Solution:
         return output
     
 # Problem 392: Is Subsequence
-# Runtime 36ms:
+# Runtime: 36ms
 # TIme Complexity: O(n)
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
@@ -82,4 +82,32 @@ class Solution:
                 return True
             else:
                 return False
+            
+# Problem 242: Is Anagram
+# Runtime: 36ms
+# Time Complexity: O(n)
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+            if len(s) != len(t):
+                return False 
+            sDict = {}
+            tDict = {}
+            for letter in s:
+                if letter not in sDict:
+                    sDict[letter] = 1
+                else:
+                    sDict[letter] += 1
+
+            for letter in t:
+                if letter not in tDict:
+                    tDict[letter] = 1
+                else:
+                    tDict[letter] += 1
+
+            for key, value in sDict.items():
+                if key not in tDict:
+                    return False
+                if sDict[key] != tDict[key]:
+                    return False
+            return True
 
