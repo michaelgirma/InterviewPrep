@@ -125,3 +125,23 @@ class Solution:
             
         return True
 
+# Top K Frequent Elements
+# Runtime: 130ms
+# Time Complexity: O(n)
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        num_map = {}
+        res = []
+        for num in nums:
+            if num in num_map:
+                num_map[num] += 1
+            else:
+                num_map[num] = 1
+
+        for i in range(k):
+            max_value = max(num_map, key=num_map.get)
+            res.append(max_value)
+            del num_map[max_value]
+        
+        return res
+
