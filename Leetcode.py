@@ -161,3 +161,15 @@ class Solution:
             res[tuple(count)].append(word)
         
         return res.values()
+    
+#Contains Duplicate
+# Runtime: 476ms
+# Time Complexity: O(n)
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        seen = set()
+        for x in nums:
+            if x in seen:
+                return True
+            seen.add(x)
+        return False
