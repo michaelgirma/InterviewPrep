@@ -173,3 +173,17 @@ class Solution:
                 return True
             seen.add(x)
         return False
+
+# Find the index of the first occurance
+# Runtime: 23ms
+# Time Complexity: O(n)
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        needle_length = len(needle)
+        haystack_length = len(haystack)
+
+        for hay_index in range(haystack_length - needle_length + 1):
+            if haystack[hay_index:hay_index + needle_length] == needle:
+                return hay_index
+
+        return -1
