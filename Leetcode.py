@@ -204,3 +204,22 @@ class Solution:
                 l += 1
             else:
                 return [l + 1, r + 1] 
+
+# Permutation in String
+# Runtime: 1164 ms
+# Time Compleixty: O(n)
+class Solution:
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        char_tracker_s1 = {}
+
+        for c in s1:
+            char_tracker_s1[c] = 1 + char_tracker_s1.get(c, 0)
+
+        for i in range(len(s2) - len(s1) + 1):
+            sub_list = s2[i:i + len(s1)]
+            character_count = Counter(sub_list)
+
+            if character_count == char_tracker_s1:
+                return True
+
+        return False
