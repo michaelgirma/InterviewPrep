@@ -244,3 +244,20 @@ class Solution:
                 r -= 1
 
         return max_area
+    
+# Permutation in string
+# Runtime: 1164 ms
+# Time Complexity: O(n)
+class Solution:
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        s1_dict = {}
+        for char in s1:
+            s1_dict[char] = 1 + s1_dict.get(char, 0)
+
+        for string in range(len(s2) - len(s1) + 1):
+            temp = s2[string: string + len(s1)]
+            
+            if s1_dict == Counter(temp):
+                return True
+        
+        return False
